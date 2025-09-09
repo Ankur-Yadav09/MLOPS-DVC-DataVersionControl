@@ -16,3 +16,29 @@
 12. Then git add-commit-push (we're saving V2 of our data at this point)
 13. Check dvc/git status, everything should be upto date.
 14. Now repeat step 10-12 for v3 of data.
+
+
+git log --oneline (To see the logs in one line)
+git checkout <hash> i.e shaid or  (To switch to different versions)
+git checkout main (To switch to main head)
+dvc pull (To fetch the data of that version to which we switch)
+
+Notes:
+What is DVC?
+
+DVC is like Git for your data & ML models.
+Git handles code (small files).
+DVC handles large files (datasets, models) without bloating Git.
+It tracks versions, integrates with cloud storage (S3, GCS, Azure, etc.), and makes ML projects reproducible.
+
+Key DVC Commands Cheat Sheet
+
+dvc init → setup DVC in project
+
+dvc add <file> → track data/model file
+
+dvc push → upload tracked files to remote storage
+
+dvc pull → download tracked files
+
+dvc remote add -d <name> <url> → configure storage
